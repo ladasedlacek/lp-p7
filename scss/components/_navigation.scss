@@ -1,0 +1,177 @@
+#landingpage{
+    .lpMainNav{
+        position: relative;
+        z-index: 10;
+
+        &__wrapper{
+            @include flex;
+            justify-content: center;
+            align-items: stretch;
+            align-content: flex-start;
+            width: 100%;
+            position: relative;
+            margin: 40px auto 0;
+            padding: 0;
+            transform: translateY(1px);
+
+            &::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 1px;
+                width: 100%;
+                background-color: #E0E0E0;
+                z-index: 10;
+                display: none;
+            }
+        }
+
+        &__tab{
+            background-color: #F8F8F8;
+            border-radius: 4px 4px 0 0;
+            cursor: pointer;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 12px 10px;
+            transition: .07s ease-in-out;
+            margin: 0 5px 0 0;
+            border: 1px solid #E0E0E0;
+            position: relative;
+            z-index: 11;
+            min-height: 42px;
+            flex: 1;
+
+            &::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                background-color: $media;
+                height: 3px;
+                border-radius: 4px 4px 0 0;
+                display: none;
+            }
+
+            &:last-of-type{
+                margin-right: 0;
+            }
+
+            &:hover{
+                background-color: $white;
+                border-bottom: 1px solid $white;
+
+                &::after{
+                    display: block;
+                }
+                
+                .par{
+                    color: $primary;
+                }
+            }
+
+            figure{
+                width: 40px;
+                height: 40px;
+                margin: 0 auto;
+            }
+
+            &--image{
+                max-width: 40px;
+                max-height: 40px;
+                width: auto;
+                margin: 0 auto;
+            }
+
+            .par{
+                width: 100%;
+                margin-top: 10px;
+                line-height: 1.2rem;
+            }
+        }
+
+        .tabActive{
+            background-color: $white;
+            border-bottom: 1px solid $white;
+
+            &::after{
+                display: block;
+            }
+                
+            .par{
+                color: $primary;
+            }
+        }
+    }
+}
+
+// media
+@media only screen and (max-width: 980px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpMainNav{
+            width: 100%;
+            overflow-x: auto;
+            position: relative;
+            margin-top: 32px;
+
+            .tabActive:after,
+            .lpMainNav__tab:hover:after{
+                display: none;
+            }
+
+            &__wrapper{
+                overflow: auto;
+                white-space: nowrap;
+                position: relative;
+                z-index: 3;
+                padding: 0;
+                display: block;
+                margin-top: 0;
+                transform: translateY(0);
+
+                &:after{
+                    display: none;
+                }
+            }
+
+            &__tab{
+                width: auto;
+                margin: 3px;
+                min-height: 32px;
+                border: 1px solid #E8E8E8;
+                border-radius: 100px;
+                padding: 8px 20px;
+                background-color: $white;
+                display: inline-block;
+
+                &:before{
+                    display: none;
+                }
+
+                figure{
+                    display: none;
+                }
+
+                .par{
+                    margin-top: 0;
+                }
+            }
+
+            .tabActive:before{
+                display: none;
+            }
+
+            &__tab:hover,
+            .tabActive{
+                border: 1px solid $primary;
+                background-color: $primary;
+
+                .par{
+                    color: $white;
+                }
+            }
+        }
+    }
+}

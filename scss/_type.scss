@@ -1,0 +1,154 @@
+// size mixin
+@function size($value) {
+    $style: ($value / 16) + rem;	
+    @return $style;
+}
+
+// roboto
+@mixin roboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+#landingpage{
+    // headlines
+    .notMoveH1,
+    .hdl2,
+    .hdl3{
+        font-weight: 700;
+        @include roboto;
+        display: block;
+        color: $alza;
+        margin: 0;
+    }
+    
+    .notMoveH1{
+        font-size: size(50);
+        line-height: size(64);
+    }
+
+    .notMoveH1.h1B{
+        font-size: size(50);
+        line-height: size(68);
+    }
+
+    .notMoveH1.h1S{
+        font-size: size(40);
+        line-height: size(52);
+    }
+    
+    .hdl2{
+        font-size: size(30);
+        line-height: size(42);
+    }
+        
+    .hdl3{
+        font-size: size(20);
+        line-height: size(28);
+    }
+
+    // body text
+    p,
+    span,
+    a,
+    li,
+    .perex,
+    .par,
+    .par-sm,
+    .listItems{
+        display: block;
+        font-weight: 400;
+        @include roboto;
+        color: $black;
+        margin: 0;
+
+        &--link{
+            display: inline-block;
+            font-weight: 400;
+            @include roboto;
+            text-decoration: underline;
+            color: $media;
+            transition: .3s ease-in-out;
+
+            &:hover{
+                color: darken($color: $media, $amount: 6%);
+            }
+        }
+    }
+
+    .perex,
+    .perex--link{
+        font-size: size(16);
+        line-height: size(26);
+    }
+
+    .par,
+    .par--item,
+    .par--link{
+        font-size: size(14);
+        line-height: size(24);
+
+        sup{
+            font-size: size(10);
+            line-height: size(10);
+        }
+    }
+
+    .par-sm,
+    .par-sm--link{
+        font-size: size(12);
+        line-height: size(21);
+    }
+
+    .fontNormal{
+        font-weight: 400;
+    }
+
+    .fontMedium{
+        font-weight: 500;
+    }
+
+    section .sectionTop{
+        max-width: 85%;
+        margin: 24px auto 0;
+    }
+
+    strong{
+        font-weight: 700;
+    }
+    
+    a{
+        text-decoration: none;
+    }
+}
+
+// layout 0
+.layout-0 #landingpage{
+    .notMoveH1{
+        font-size: size(40);
+        line-height: size(52);
+    }
+}
+
+// media
+@media only screen and (max-width: 750px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .notMoveH1,
+        .notMoveH1.h1B{
+            font-size: size(40);
+            line-height: size(68);
+        }
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .notMoveH1,
+        .notMoveH1.h1B,
+        .notMoveH1.h1S{
+            font-size: size(35);
+            line-height: size(60);
+        }
+    }
+}

@@ -1,0 +1,163 @@
+#landingpage{
+    .lpTiles{
+        &__wrapper{
+            margin-top: 30px;
+        }
+    
+        &__tile{
+            border-radius: 4px;
+            box-shadow: 0 1px 4px rgba($color: $black, $alpha: .15);
+            text-align: left;
+            padding: 10px 14px; 
+            @include flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px;
+            transition: .1s ease-in-out;
+            position: relative;
+            background-color: $white;
+            text-decoration: none;
+            box-sizing: border-box;
+            width: calc((100% / 3) - 20px);
+            cursor: pointer;
+    
+            &:hover{
+                box-shadow: 0 2px 6px rgba($color: $black, $alpha: .15);
+    
+                .perex{
+                    color: $media;
+                }
+    
+                .lpTiles__right--icon{
+                    path,
+                    use{
+                        fill: $media;
+                    }
+                }
+            }
+        }
+    
+        &__left{
+            @include flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+    
+            figure{
+                width: 80px;
+                height: 80px;
+                margin: 0; 
+                @include flex;
+                align-content: center; 
+                position: relative;
+                flex: 0 0 80px;
+
+                svg{
+                    max-width: 64px;
+                    max-height: 64px;
+                }
+
+                img.lpTiles__left--image{
+                    max-width: 80px;
+                    height: 80px;
+                    max-height: 80px;
+                }
+            }
+
+            figure.addIcon{
+                position: relative;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0; 
+                    width: 32px;
+                    height: 32px;
+                    background: url('https://cdn.alza.cz/Foto/or/lp/alzaexpres-complet/build/img/tile-service-icon.svg') center no-repeat;
+                    background-size: 100%;
+                    transform: translate(-10%, -12%);
+                }
+            }
+    
+            p.lpTiles__left--name{
+                color: $black;
+                font-weight: 500;
+                transition: .1s ease-in-out;
+                display: inline-block;
+                margin: 10px 10px 10px 20px;
+                flex: 1;
+            }
+        }
+    
+        &__right{
+            &--icon{
+                width: 20px;
+                height: 20px;
+    
+                path,
+                use{
+                    fill: $black;
+                    transition: .1s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+// layout-0
+.layout-0 #landingpage{
+    .lpTiles__left figure{
+        width: 64px;
+        height: 64px;
+        flex: 0 0 64px; 
+
+        img.lpTiles__left--image{
+            max-width: 64px;
+            height: 64px;
+            max-height: 64px;
+        }
+    }
+}
+
+// media
+@media only screen and (max-width: 980px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpTiles__left figure{
+            width: 48px;
+            height: 48px;
+            flex: 0 0 48px; 
+    
+            img.lpTiles__left--image{
+                max-width: 48px;
+                height: 48px;
+                max-height: 48px;
+            }
+        }
+
+        .lpTiles__left figure.addIcon:before{
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpTiles__tile{
+            width: calc((100% / 2) - 20px);
+        }
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpTiles__tile{
+            width: 100%;
+        }
+    }
+}

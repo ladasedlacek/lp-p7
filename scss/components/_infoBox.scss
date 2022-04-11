@@ -1,0 +1,13 @@
+#landingpage{
+    .lpInfoBox{
+        background-color: $light;
+        border-radius: 4px;
+        padding: 20px;
+        margin-top: 32px;
+        width: 100%;
+
+        .par-sm{
+            color: $dark;
+        }
+    }
+}

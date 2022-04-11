@@ -1,0 +1,138 @@
+#landingpage{
+    .lpInstalation{
+        &__contentWrapper{
+            border-radius: 0 0 4px 4px;
+            border: 1px solid #E0E0E0;
+            background-color: $white;
+            padding: 40px;
+
+            .contentOpened{
+                height: 100%;
+                opacity: 1;
+            }
+
+            .contentClosed{
+                height: 0;
+                opacity: 0;
+            }
+        }
+
+        &__contentBoxWrapper{
+            @include flex;
+            align-items: flex-start;
+            overflow: hidden;
+        }
+
+        // image
+        &__contentImage{
+            flex: 0 0 230px;
+            
+            figure{
+                width: 230px;
+                @include flex;
+                margin: 0 auto;
+            }
+
+            &--image{
+                max-width: 230px;
+            }
+        }
+
+        // content
+        &__contentInfo{
+            flex: 1;
+            text-align: left;
+            padding-left: 60px;
+
+            .perex:not(:first-of-type){
+                margin-top: 24px;
+            }
+
+            .perex{
+                color: $alza;
+            }
+
+            .btn{
+                margin-top: 24px;
+            }
+        }
+
+        // items
+        &__listItems{
+            padding: 0;
+            margin: 16px 0 0;
+    
+            .par--item{
+                position: relative;
+                margin-top: 4px;
+                padding-left: 32px;
+                color: $dark;
+    
+                &:first-of-type{
+                    margin-top: 0;
+                }
+            }
+    
+            .par--item.checkIcon,
+            .par--item.errorIcon{
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 2px;
+                    width: 20px;
+                    height: 20px;
+                    
+                }
+            }
+    
+            .par--item.checkIcon{
+                &::before{
+                    background: url('https://cdn.alza.cz/Foto/or/lp/alzaexpres-complet/build/img/check.svg') center no-repeat;
+                    background-size: 100%;
+                }
+            }
+    
+            .par--item.errorIcon{
+                &::before{
+                    background: url('https://cdn.alza.cz/Foto/or/lp/alzaexpres-complet/build/img/error.svg') center no-repeat;
+                    background-size: 100%;
+                }
+            }
+        }
+
+        // buttons
+        &__buttonsWrapper{
+            display: flex;
+
+            .btn{
+                &:first-of-type{
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+}
+
+// media
+@media only screen and (max-width: 980px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpInstalation__contentWrapper{
+            border-radius: 4px;
+            margin-top: 24px;
+        }
+
+        .lpInstalation__contentImage{
+            display: none;
+        }
+
+        .lpInstalation__contentInfo{
+            padding-left: 0;
+        }
+
+        .lpInstalation__contentWrapper{
+            padding: 24px;
+        }
+    }
+}

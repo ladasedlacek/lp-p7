@@ -1,0 +1,172 @@
+#landingpage .lpDelivery{
+    .lpTableWrapper{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .lpTable{
+        margin: 40px -20px 0;
+        position: relative;
+        border-spacing: 20px 0;
+        table-layout: fixed;
+        width: calc(100% + 40px);
+
+        // head
+        thead{
+            th{
+                text-align: center;
+                vertical-align: bottom;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        &__tableHead{
+            border-top: 5px solid $media;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            text-align: center;
+            padding: 0 24px 16px;
+            background-color: $white;
+
+            &--best{
+                padding: 8px 10px;
+                background-color: $media;
+                color: $white;
+                font-weight: 500;
+                display: inline-block;
+                border-radius: 0 0 4px 4px;
+                transform: translateY(-1px);
+            }
+
+            figure{
+                margin: 16px auto 0;
+
+                svg{
+                    max-width: 54px;
+                    height: 54px;
+                    max-height: 54px;
+                }
+            }
+
+            &--name{
+                color: $media;
+                font-weight: 500;
+                margin-top: 16px;
+            }
+
+            &--price{
+                color: #E9242E;
+                margin-top: 16px;
+                font-weight: 500;
+            }
+
+            &--paragraph{
+                color: $dark;
+                margin-top: 16px;
+            }
+        }
+
+        // body
+        tbody{
+            tr{
+                &:nth-of-type(even){
+                    td{
+                        background-color: $white;
+                    }
+                    
+                }
+
+                &:last-of-type{
+                    td{
+                        border-radius: 0 0 4px 4px;
+                        border-bottom: 1px solid #e0e0e0;
+                    }
+                }
+
+                th{
+                    padding: 8px 32px 8px 12px;
+                    text-align: right;
+
+                    .par--link{
+                        color: $dark;
+                        text-decoration-style: dotted;
+                        transition: .3s ease-in-out;
+                        position: relative;
+                        cursor: pointer;
+
+                        &:hover{
+                            color: $media;
+                        }
+
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            width: 20px;
+                            height: 20px;
+                            background: url('https://cdn.alza.cz/Foto/or/lp/alzaexpres-complet/build/img/icons-circle-question.svg') center no-repeat;
+                            background-size: 100%;
+                            top: 2px;
+                            right: -32px;
+                        }
+                    }
+                }
+
+                td{
+                    vertical-align: middle;
+                    text-align: center;
+                    line-height: 0;
+                    padding: 0;
+                    background-color: #f8f8f8;
+
+                    .tableIconWrapper{
+                        &--icon{
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        // thead + tbody
+        tbody td,
+        thead th:nth-child(n+2) .lpTable__tableHead{
+            border-left: 1px solid #e0e0e0;
+            border-right: 1px solid #e0e0e0;
+        }
+    }
+}
+
+// layout-0
+.layout-0 #landingpage{
+    .lpDelivery{
+        .lpTableWrapper{
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+
+// media
+@media only screen and (max-width: 850px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpDelivery{
+            .lpTableWrapper{
+                width: 100%;
+                overflow-x: auto;
+                max-width: 100%;
+
+                .lpTable{
+                    width: 850px;
+                    table-layout: auto;
+
+                    thead .lpMobileWidth{
+                        width: 25%;
+                    }
+                }
+            }
+        }
+    }
+}
