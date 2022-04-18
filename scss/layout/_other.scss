@@ -1,0 +1,68 @@
+// shop
+div#pobocka{
+    overflow: hidden;
+    padding: 0 0 24px;
+    margin-top: 30px;
+}
+
+div#pobockaInsideBlock{
+    margin: 0;
+}
+
+.pobocka_header-block,
+.boxInfo.border{
+    margin: 0 65px 40px;
+}
+
+.boxInfo{
+    margin: 0 65px 24px;
+}
+
+.boxVirtualView.boxInfo{
+    margin-bottom: 32px;
+}
+
+#pobocka h2.Section-heading{
+    margin-left: 0;
+}
+
+#pobocka h2{
+    margin-left: 65px;
+}
+
+.boxVirtualView{
+    padding-bottom: 0;
+}
+
+.boxButtons{
+    margin-left: 65px;
+    margin-bottom: 32px;
+    padding-bottom: 0;
+}
+
+// virtual visit
+.embed-container{
+    border: none;
+    padding: 1%;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba($color: $black, $alpha: .15)
+}
+
+// buttons 
+.branchArea, .branchMoreInfo{
+    font-weight: 500;
+}
+
+// gallery
+section.galerie{
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-bottom: 32px;
+}
+
+.boxInfo section.galerie div.figureImageClass{
+    max-width: 100%;
+    width: calc((100% / 4) - 40px);
+    margin: 10px !important;
+    box-shadow: 0 1px 4px rgba($color: $black, $alpha: .15);
+}
