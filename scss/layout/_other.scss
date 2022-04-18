@@ -9,10 +9,13 @@ div#pobockaInsideBlock{
     margin: 0;
 }
 
-.pobocka_header-block,
 .boxInfo.border,
 #diagramWidjet{
     margin: 0 65px 40px;
+}
+
+.pobocka_header-block{
+    margin: 16px 65px 40px;
 }
 
 .boxInfo{
@@ -67,4 +70,48 @@ section.galerie{
     margin: 10px !important;
     box-shadow: 0 1px 4px rgba($color: $black, $alpha: .15);
     border: none !important;
+}
+
+// layout 0
+.layout-0 .boxInfo section.galerie div{
+    height: 115px;
+}
+
+// media
+@media only screen and (max-width: 980px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .boxInfo.border,
+        #diagramWidjet{
+            margin: 0 24px 40px;
+        }
+
+        .pobocka_header-block{
+            margin: 16px 24px 40px;
+        }
+
+        .boxInfo{
+            margin: 0 24px 24px;
+        }
+
+        #pobocka h2{
+            margin-left: 24px;
+        }
+
+        .layout-0 .boxInfo section.galerie div{
+            height: 115px;
+        }
+
+        .boxInfo section.galerie div.figureImageClass{
+            width: calc(33.33333% - 40px);
+        }
+    }
+}
+@media only screen and (max-width: 550px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .boxInfo section.galerie div.figureImageClass{
+            width: calc(25% - 40px);
+        }
+    }
 }
