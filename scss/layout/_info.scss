@@ -1,0 +1,56 @@
+#landingpage{
+    .lpInfo{
+        background-color: $light;
+
+        &__wrapper.tilesFlex{
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0;
+        }
+
+        &__textWrapper{
+            text-align: left;
+            width: 60%;
+        }
+
+        &__listItems{
+            padding-left: 0;
+            margin: 24px 0 0;
+
+            .par--item{
+                padding-left: 32px;
+                position: relative;
+                margin-top: 4px;
+
+                &:first-of-type{
+                    margin-top: 0;
+                }
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    background: url('https://cdn.alza.cz/Foto/or/lp/p7-showroom/build/img/check.svg') center no-repeat;
+                    background-size: 100%;
+                    left: 0;
+                    top: 1px;
+                }
+            }
+        }
+    }
+} 
+
+// media
+@media only screen and (max-width: 980px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpInfo__imageWrapper{
+            display: none;
+        }
+
+        .lpInfo__wrapper.tilesFlex{
+            width: 100%;
+        }
+    }
+}

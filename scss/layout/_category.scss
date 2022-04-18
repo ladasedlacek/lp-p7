@@ -1,0 +1,79 @@
+#landingpage{
+    .lpCategory{
+        background-color: $media;
+
+        .hdl2{
+            text-align: left;
+            color: $white;
+        }
+
+        &__box{
+            width: calc((100% / 6) - 20px);
+            margin: 10px;
+            border-radius: 4px;
+            background-color: $white;
+            box-shadow: 0 1px 4px rgba($color: $black, $alpha: .15);
+            padding: 10px 20px 20px;
+            text-align: center;
+            transition: .3s ease-in-out;
+
+            &:hover{
+                box-shadow: 0 2px 6px rgba($color: $black, $alpha: .3);
+            }
+
+            figure{
+                margin: 0 auto;
+            }
+
+            &--product{
+                margin: 0 auto;
+            }
+
+            &--number,
+            &--name{
+                color: $media;
+                font-weight: 500;
+                margin-top: 15px;
+                text-align: center;
+            }
+
+            &--name{
+                color: $black;
+                margin-top: 0;
+            }
+        }
+
+        .btn{
+            margin-top: 32px;
+        }
+    }
+}
+
+// media
+@media only screen and (max-width: 850px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpCategory__box{
+            width: calc((100% / 3) - 10px);
+            margin: 5px;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpCategory__box{
+            width: calc((100% / 2) - 10px);
+        }
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .mobile #landingpage,
+    .mobileapp #landingpage{
+        .lpCategory__box{
+            width: 100%;
+        }
+    }
+}
