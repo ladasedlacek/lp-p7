@@ -46,6 +46,30 @@
                 &--name{
                     font-weight: 500;
                     color: $media;
+                    position: relative;
+                }
+                
+                &--name.icon--apple::after{
+                    content: '';
+                    position: absolute;
+                    width: 21px;
+                    height: 26px;
+                    background: url('https://cdn.alza.cz/Foto/or/lp/p7-showroom/build/img/apple.svg') center no-repeat;
+                    background-size: 100%;
+                    right: 0;
+                    top: 0;
+                }
+
+                &--name.icon--intel::after{
+                    content: '';
+                    position: absolute;
+                    width: 38px;
+                    height: 16px;
+                    background: url('https://cdn.alza.cz/Foto/or/lp/p7-showroom/build/img/intel.svg') center no-repeat;
+                    background-size: 100%;
+                    right: 0;
+                    top: 0;
+                    transform: translateY(40%);
                 }
 
                 &--text{
