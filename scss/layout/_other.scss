@@ -94,7 +94,8 @@ section.galerie{
             margin: 0 24px 24px;
         }
 
-        #pobocka h2{
+        #pobocka h2,
+        .boxButtons{
             margin-left: 24px;
         }
 
@@ -111,7 +112,7 @@ section.galerie{
     .mobile,
     .mobileapp{
         .boxInfo section.galerie div.figureImageClass{
-            width: calc(25% - 40px);
+            width: calc(50% - 40px);
         }
     }
 }
