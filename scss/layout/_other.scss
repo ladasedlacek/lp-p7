@@ -79,8 +79,8 @@ section.galerie{
 
 // media
 @media only screen and (max-width: 980px){
-    .mobile #landingpage,
-    .mobileapp #landingpage{
+    .mobile,
+    .mobileapp{
         .boxInfo.border,
         #diagramWidjet{
             margin: 0 24px 40px;
@@ -108,8 +108,8 @@ section.galerie{
     }
 }
 @media only screen and (max-width: 550px){
-    .mobile #landingpage,
-    .mobileapp #landingpage{
+    .mobile,
+    .mobileapp{
         .boxInfo section.galerie div.figureImageClass{
             width: calc(25% - 40px);
         }
