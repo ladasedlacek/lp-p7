@@ -1,11 +1,18 @@
 #landingpage{
     .lpInfo{
         background-color: $light;
+        margin-bottom: 40px;
 
         &__wrapper.tilesFlex{
             justify-content: space-between;
             align-items: center;
             margin-top: 0;
+        }
+
+        &__imageWrapper{
+            img{
+                transform: translateY(10%);
+            }
         }
 
         &__textWrapper{

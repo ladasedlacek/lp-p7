@@ -10,7 +10,8 @@ div#pobockaInsideBlock{
 }
 
 .pobocka_header-block,
-.boxInfo.border{
+.boxInfo.border,
+#diagramWidjet{
     margin: 0 65px 40px;
 }
 
@@ -40,9 +41,14 @@ div#pobockaInsideBlock{
     padding-bottom: 0;
 }
 
+// category
+.alzBox2{
+    display: none;
+}
+
 // virtual visit
 .embed-container{
-    border: none;
+    border: none !important;
     padding: 1%;
     border-radius: 4px;
     box-shadow: 0 1px 4px rgba($color: $black, $alpha: .15)
@@ -65,4 +71,5 @@ section.galerie{
     width: calc((100% / 4) - 40px);
     margin: 10px !important;
     box-shadow: 0 1px 4px rgba($color: $black, $alpha: .15);
+    border: none !important;
 }
