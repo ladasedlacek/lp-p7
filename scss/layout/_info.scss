@@ -1,6 +1,7 @@
 #landingpage{
     .lpInfo{
         background-color: $light;
+        margin-bottom: 50px;
 
         &__wrapper.tilesFlex{
             justify-content: space-between;
